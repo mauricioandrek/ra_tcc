@@ -1,0 +1,25 @@
+<!doctype HTML>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    </head>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script>
+    <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.7.7/aframe/build/aframe-ar.js"></script>
+    <!-- add this script in order to load a large set of 3D model extensions-->
+    <script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
+
+    <body style='margin : 0px; overflow: hidden;'>
+        <a-scene embedded arjs='sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3; '>
+            {% for objeto in objetos_list %}
+              <a-marker type='barcode' value='{{objeto.id_marcador}}' registerevents>
+                  {% load static %}
+                  <a-entity scale="0.05 0.05 0.05" text="value:{{objeto.descricao}}; color:black" obj-model="obj: url({% static ra_tcc %}ra_tcc/{{objeto.path_modelo}}/tinker.obj); mtl: url({% static ra_tcc %}ra_tcc/{{objeto.path_modelo}}/obj.mtl)">
+                  </a-entity>
+              </a-marker>
+            {% endfor %}
+          <a-entity camera></a-entity>
+        </a-scene>    
+    </body>
+</html>
