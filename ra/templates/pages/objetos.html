@@ -19,7 +19,7 @@
             {% for objeto in objetos_list %}
               <a-marker type='barcode' value='{{objeto.id_marcador}}' registerevents>
                   {% load static %}
-                  <a-entity scale="0.05 0.05 0.05" obj-model="obj: url({% static ra_tcc %}ra_tcc/{{objeto.path_modelo}}/tinker.obj); mtl: url({% static ra_tcc %}ra_tcc/{{objeto.path_modelo}}/obj.mtl)">
+                  <a-entity scale="0.05 0.05 0.05" obj-model="obj: url({% static ra %}ra_tcc/{{objeto.path_modelo}}/tinker.obj); mtl: url({% static ra %}ra_tcc/{{objeto.path_modelo}}/obj.mtl)">
                   </a-entity>
               </a-marker>
             {% endfor %}
