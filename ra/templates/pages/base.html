@@ -5,13 +5,13 @@
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
         <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <link rel="stylesheet" href="/static/css/styles.css">
     </head>
     <body>
         <div class="page-header">
-            <a href="{% url 'home' %}" class="top-menu"><span class="glyphicon glyphicon-home"></span>Home</a>
-            <a href="{% url 'leitura' %}" class="top-menu"><span class="glyphicon glyphicon-search"></span>Fazer a Leitura</a>        
-            <a href="{% url 'objeto_novo' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span>Novo Marcador</a>
+            <a href="{% url 'home' %}" class="top-menu"><span class="glyphicon glyphicon-home" style="padding: 5px;"></span>Home</a>
+            <a href="{% url 'leitura' %}" class="top-menu"><span class="glyphicon glyphicon-search" style="padding: 5px;"></span>Fazer a Leitura</a>        
+            <a href="{% url 'objeto_novo' %}" class="top-menu"><span class="glyphicon glyphicon-plus" style="padding: 5px;"></span>Novo Marcador</a>
             
             <p>
                     Usando a Realidade Aumentada para auxiliar o ensino de
