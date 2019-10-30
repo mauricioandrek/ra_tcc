@@ -33,12 +33,12 @@ h1, h2, h3, h4 {
 .top-menu, .top-menu:hover, .top-menu:visited {
     color: #ffffff;
     float: right;
-    font-size: 26pt;
+    font-size: 20pt;
     margin-right: 20px;
 }
 
 .post {
-    margin-bottom: 70px;
+    margin-bottom: 40px;
 }
 
 .post h2 a, .post h2 a:visited {
