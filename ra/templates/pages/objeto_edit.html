@@ -1,0 +1,10 @@
+{% extends 'pages/base.html' %}
+
+{% block content %}
+    <h2>Novo marcador</h2>
+    <form method="POST" enctype="multipart/form-data" class="post-form">{% csrf_token %}
+        {{ form.as_p }}
+        <p>Arquivos 3D: <input id="id_file_obj" type="file" name="file" multiple=""> </p>
+        <button type="submit" class="save btn btn-default">Salvar</button>
+    </form>
+{% endblock %}
